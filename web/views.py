@@ -5,5 +5,5 @@ from controllers import get_all_posts
 def hello():
   result = ""
   for i in get_all_posts():
-    result = result + i.title + "<br>"
+    result = result + "{0} | {1} | {2} | {3} | {4} <br>".format(i.id, i.pub_date, i.title, i.body, i.category)
   return result
