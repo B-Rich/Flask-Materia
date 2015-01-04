@@ -1,0 +1,7 @@
+.card.small {
+  height: 375px !important;
+}
+
+.card.small .card-image {
+  height: 200px !important;
+}

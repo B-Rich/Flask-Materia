@@ -1,8 +1,13 @@
 from app import app
+from flask import render_template
 from controllers import get_all_posts
 
 @app.route("/")
-def hello():
+def index():
+  return render_template('index.html', posts=get_all_posts())
+
+@app.route("/test")
+def test():
   """ Temporary debugging function """
   result = ""
   for i in get_all_posts():
