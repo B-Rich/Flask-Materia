@@ -1,10 +1,11 @@
 from app import db
 from models import Post
+from flask.ext.sqlalchemy import SQLAlchemy
 
 # Simple CRUD for our posts
 
-def get_all_posts():
-  return Post.query.all()
+def get_posts(limit):
+  return Post.query.order_by(Post.pub_date.desc()).limit(limit)
 
 def create_post(title, flavor_text, small_img_url, body, category):
   post = Post(title, flavor_text, small_img_url, body, category)

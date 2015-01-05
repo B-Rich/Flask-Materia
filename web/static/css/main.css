@@ -5,3 +5,16 @@
 .card.small .card-image {
   height: 200px !important;
 }
+
+.side-nav {
+  line-height: initial;
+}
+
+.brb-icon {
+  margin-top: 6px;
+  margin-left: 6px;
+}
+
+.brand-logo-text {
+  margin-left: 60px;
+}

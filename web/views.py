@@ -1,10 +1,10 @@
 from app import app
 from flask import render_template
-from controllers import get_all_posts
+from controllers import get_posts
 
 @app.route("/")
 def index():
-  return render_template('index.html', posts=get_all_posts())
+  return render_template('index.html', posts=get_posts(9))
 
 @app.route("/test")
 def test():

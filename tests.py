@@ -1,5 +1,5 @@
 from web.app import app, db
-from web.controllers import get_all_posts, create_post, update_post, delete_post
+from web.controllers import get_posts, create_post, update_post, delete_post
 from web.models import Post
 
 # Simple barebone backend tests
@@ -37,3 +37,9 @@ if len(failing_tests) == 0:
   print "All tests passed!"
 else:
   print "Failed {0} tests: {1}".format(len(failing_tests), ', '.join(failing_tests))
+
+# Populate initial cards
+
+create_post('Test Post 2', 'Test Flavor', 'http://placehold.it/300x200', 'Test body', 'Test Cat')
+create_post('Test Post 3', 'Test Flavor', 'http://placehold.it/300x200', 'Test body', 'Test Cat')
+create_post('Test Post 4', 'Test Flavor', 'http://placehold.it/300x200', 'Test body', 'Test Cat')

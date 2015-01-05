@@ -7,13 +7,16 @@
   {% block extra_css %}{% endblock %}
 </head>
 <body>
-
 <nav>
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Julio Bongco Talks Shit</a>
-    <ul id="nav-mobile" class="right side-nav">
-      <li><i class="mdi-action-search"></i></li>
-      <li><a href="sass.html">About</a></li>
+    <a href="#!" class="brand-logo">
+      <img class="brb-icon" src="{{ url_for('static', filename='img/brb_logo_small.png')}}">
+    </a>
+    <ul class="side-nav">
+      <li><a href="sass.html"><i class="mdi-action-search"></i></a></li>
+      <li><a href="components.html"><i class="mdi-action-view-module"></i></a></li>
+      <li><a href="javascript.html"><i class="mdi-navigation-refresh"></i></a></li>
+      <li><a href="mobile.html"><i class="mdi-navigation-more-vert"></i></a></li>
     </ul>
   </div>
 </nav>
