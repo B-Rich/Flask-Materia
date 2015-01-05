@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/editor.css')}}"/>
+{% endblock %}
+
+{% block page_content %}
+<div class="editor"></div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.12.2/JSXTransformer.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.12.2/react-with-addons.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/autosize.js/1.18.17/jquery.autosize.min.js"></script>
+<script type="text/jsx" src="{{ url_for('static', filename='js/editor.js')}}"></script>
+{% endblock %}
