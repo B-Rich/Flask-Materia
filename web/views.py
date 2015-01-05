@@ -1,19 +1,21 @@
 from app import app
-from flask import render_template
-from controllers import get_posts
+from flask import render_template, request
+from controllers import get_posts, get_all_posts, get_category_list, get_posts_with_category
 
-@app.route("/")
-def index():
-  return render_template('index.html', posts=get_posts(9))
+@app.route("/blog")
+def blog():
+  return render_template('blog.html', posts=get_posts(9), categories=get_category_list())
 
-@app.route("/editor")
+@app.route("/blog/category/<category>")
+def category(category):
+  # Searches for all posts in a certain category
+  return render_template('blog.html', posts=get_posts_with_category(category), categories=get_category_list())
+
+@app.route("/blog/editor")
 def editor():
   return render_template('editor.html')
 
 @app.route("/test")
 def test():
-  """ Temporary debugging function """
-  result = ""
-  for i in get_all_posts():
-    result = result + "{0} | {1} | {2} | {3} | {4} <br>".format(i.id, i.pub_date, i.title, i.body, i.category)
-  return result
+  result = get_category_list()
+  return "!"

@@ -15,7 +15,7 @@ def clean_slate():
 # Test 1: CRUD Test
 clean_slate()
 create_post('Test Post', 'Test Flavor', 'http://placehold.it/300x200', 'Test body', 'Test Cat')
-create_post('Test Post 2', 'Test Flavor2', 'http://placehold.it/300x200', 'Test body 2', 'Test Cat 2')
+create_post('Test Post 2', 'Test Flavor2', 'http://placehold.it/300x200', 'Test body 2', 'Test Cat')
 update_post(1, 'Updated Post', 'Updated Flavor', 'http://placehold.it/300x200', 'Updated Body', 'Updated Catty')
 delete_post(2)
 
@@ -40,6 +40,6 @@ else:
 
 # Populate initial cards
 
-create_post('Test Post 2', 'Test Flavor', 'http://placehold.it/300x200', 'Test body', 'Test Cat')
-create_post('Test Post 3', 'Test Flavor', 'http://placehold.it/300x200', 'Test body', 'Test Cat')
-create_post('Test Post 4', 'Test Flavor', 'http://placehold.it/300x200', 'Test body', 'Test Cat')
+create_post('Test Post 2', 'Test Flavor', 'http://placehold.it/300x200', 'Test body', 'Foo')
+create_post('Test Post 3', 'Test Flavor', 'http://placehold.it/300x200', 'Test body', 'Foo')
+create_post('Test Post 4', 'Test Flavor', 'http://placehold.it/300x200', 'Test body', 'Spam')
