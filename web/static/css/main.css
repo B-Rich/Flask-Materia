@@ -1,5 +1,6 @@
 .card.small {
   height: 375px !important;
+  margin-top: 30px;
 }
 
 .card.small .card-image {

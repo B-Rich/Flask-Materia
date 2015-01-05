@@ -6,6 +6,10 @@ from controllers import get_posts
 def index():
   return render_template('index.html', posts=get_posts(9))
 
+@app.route("/editor")
+def editor():
+  return render_template('editor.html')
+
 @app.route("/test")
 def test():
   """ Temporary debugging function """
